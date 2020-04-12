@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cars</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @cars.each do |car| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      <td>
+      <%= image_tag('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/2017_Tesla_Model_X_front_5.27.18.jpg/1200px-2017_Tesla_Model_X_front_5.27.18.jpg', class: 'list_image') %>
+      </td>
+      <td class="list_description">
+          <dl>
+            <dt><%= car.brand %> <%= car.model %></dt>
+            <dd>
+              <p>Seats: <%= car.seats %></p>
+              <p>Body: <%= car.body %></p>
+              <p>Transmission: <%= car.transmission %></p>
+            </dd>
+            <dd><%= truncate(strip_tags(car.description), length: 80) %></dd>
+          </dl>
+      <td><%= car.price %></td>
+
+      <td class="list_actions">
+        <%= link_to 'Show', car %>
+        <%= link_to 'Edit', edit_car_path(car) %><
+        <%= link_to 'Destroy', car, method: :delete, data: {confirm: 'Are you sure?'} %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car', new_car_path %>
