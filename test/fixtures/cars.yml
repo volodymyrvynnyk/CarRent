@@ -21,3 +21,13 @@ sprinter:
   seats: 22
   body: Van
 
+modelX:
+    brand: Tesla
+    model: Model X
+    description: Electro SUV
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c8/2019_Mercedes-Benz_Vito_Tourer_SELECT_119_BlueTec_2.1.jpg
+    price: 500
+    transmission: Automatic, 4x4
+    seats: 5
+    body: SUV
+
