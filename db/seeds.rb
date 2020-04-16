@@ -14,7 +14,7 @@ Car.create(
     seats: 5,
     transmission:'automatic, 4x4',
     price: 500,
-    image_url:'storage/images/modelx.jpeg',
+    image_url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/2017_Tesla_Model_X_front_5.27.18.jpg/1200px-2017_Tesla_Model_X_front_5.27.18.jpg',
     body:'SUV'
 )
 
@@ -25,7 +25,7 @@ Car.create(
     seats: 5,
     transmission:'automatic, 4x2',
     price: 300,
-    image_url:'/home/vynnyk/GitHub/CarRent/CarRent/storage/images/camry.jpeg',
+    image_url:'https://upload.wikimedia.org/wikipedia/commons/a/ac/2018_Toyota_Camry_%28ASV70R%29_Ascent_sedan_%282018-08-27%29_01.jpg',
     body:'Sedan'
 )
 
@@ -36,7 +36,7 @@ Car.create(
     seats: 5,
     transmission:'manual, 4x4',
     price: 150,
-    image_url:'jetbrains://rubymine/navigate/reference?project=CarRent&path=storage/images/duster.jpeg',
+    image_url:'https://upload.wikimedia.org/wikipedia/commons/3/3f/Dacia_Duster_TCe_125_4x2_Prestige_%28Facelift%29_%E2%80%93_Frontansicht%2C_13._Juli_2014%2C_Ratingen.jpg',
     body:'Suv'
 )
 
@@ -47,6 +47,6 @@ Car.create(
     seats: 9,
     transmission:'manual, 4x2',
     price: 250,
-    image_url:'storage/images/vito.jpg',
+    image_url:'https://upload.wikimedia.org/wikipedia/commons/c/c8/2019_Mercedes-Benz_Vito_Tourer_SELECT_119_BlueTec_2.1.jpg',
     body:'Van'
 )

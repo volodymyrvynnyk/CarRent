@@ -15,7 +15,7 @@
   <% @cars.each do |car| %>
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
       <td>
-      <%= image_tag('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/2017_Tesla_Model_X_front_5.27.18.jpg/1200px-2017_Tesla_Model_X_front_5.27.18.jpg', class: 'list_image') %>
+      <%= image_tag(car.image_url, class: 'list_image') %>
       </td>
       <td class="list_description">
           <dl>

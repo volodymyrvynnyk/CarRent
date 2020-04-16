@@ -1,21 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  brand: MyString
-  model: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
-  transmission: MyString
-  seats: 9.99
-  body: MyString
+venza:
+  brand: Toyota
+  model: Venza
+  description: Hatchback 4x2, 3.5 petrol
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c8/2019_Mercedes-Benz_Vito_Tourer_SELECT_119_BlueTec_2.1.jpg
+  price: 230
+  transmission: Automatic, 4x2
+  seats: 2
+  body: Hatchback
 
-two:
-  brand: MyString
-  model: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
-  transmission: MyString
-  seats: 9.99
-  body: MyString
+
+sprinter:
+  brand: Mercedes-Benz
+  model: Sprinter
+  description: Passanger Bus
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c8/2019_Mercedes-Benz_Vito_Tourer_SELECT_119_BlueTec_2.1.jpg
+  price: 260
+  transmission: Automatic, 4x2
+  seats: 22
+  body: Van
+

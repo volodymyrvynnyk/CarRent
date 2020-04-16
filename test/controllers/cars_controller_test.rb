@@ -2,7 +2,16 @@ require 'test_helper'
 
 class CarsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @car = cars(:one)
+    @car = cars(:venza)
+    @update = {
+        brand:'Tesla',
+        model:'Model X',
+        description: 'Wibbles are fun!',
+        image_url:
+            'https://upload.wikimedia.org/wikipedia/commons/c/c8/2019_Mercedes-Benz_Vito_Tourer_SELECT_119_BlueTec_2.1.jpg',
+        price:
+            200
+    }
   end
 
   test "should get index" do
