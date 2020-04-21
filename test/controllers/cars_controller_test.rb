@@ -14,6 +14,13 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
+  test "can't delete car in cart" do
+    assert_difference('Car.count', 0) do
+      delete car_url(cars(:sprinter))
+    end
+    assert_redirected_to cars_url
+  end
+
   test "should get index" do
     get cars_url
     assert_response :success
