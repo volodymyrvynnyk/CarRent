@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_21_084454) do
+ActiveRecord::Schema.define(version: 2020_04_21_114549) do
 
   create_table "cars", force: :cascade do |t|
     t.string "brand"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_04_21_084454) do
     t.integer "cart_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "hours", default: 1
     t.index ["car_id"], name: "index_line_items_on_car_id"
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
   end
