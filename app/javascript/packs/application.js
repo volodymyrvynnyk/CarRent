@@ -15,3 +15,8 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//= require jquery
+//= require jquery-ui/effect-blind
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree
