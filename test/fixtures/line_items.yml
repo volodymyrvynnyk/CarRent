@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car: sprinter
+  cart: one
+
+two:
+  car: sprinter
+  cart: two

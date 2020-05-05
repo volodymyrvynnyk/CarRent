@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<h1>Rent our car</h1>
+<% cache @cars do %>
+  <% @cars.each do |car| %>
+    <% cache car do %>
+      <div class="entry">
+        <%= image_tag car.image_url, :class => "car_avatar" %>
+        <h3><%= car.brand + " " + car.model %></h3>
+        <h5>Transmission: <%= car.transmission %></h5>
+        <h5>Body: <%= car.body %></h5>
+        <h5>Seats number: <%= car.seats %></h5>
+
+        <%= sanitize(car.description) %>
+        <div class="price_line">
+          <h3>Price per hour: <span class="price"><%= number_to_currency(car.price) %></span></h3>
+          <%= button_to 'Add to Cart', line_items_path(car_id: car), remote: true %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
