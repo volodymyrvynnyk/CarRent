@@ -44,9 +44,9 @@ class CarsController < ApplicationController
       if @car.update(car_params)
         format.html { redirect_to @car, notice: 'Car was successfully updated.' }
         format.json { render :show, status: :ok, location: @car }
-        @cars = Car. all
-        ActionCable. server . broadcast 'cars' ,
-                                        html: render_to_string( 'rent/index' , layout: false )
+        @cars = Car.all
+        ActionCable.server.broadcast 'cars',
+                                     html: render_to_string('rent/index', layout: false)
       else
         format.html { render :edit }
         format.json { render json: @car.errors, status: :unprocessable_entity }
@@ -64,14 +64,25 @@ class CarsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_car
-      @car = Car.find(params[:id])
+  def who_bought
+    @cars = Car.find (params[:id])
+    @latest_order = @car.orders.order (:updated_at).last
+    if stale?(@latest_order)
+      respond_to do |format|
+        format.atom
+      end
     end
+  end
 
-    # Only allow a list of trusted parameters through.
-    def car_params
-      params.require(:car).permit(:brand, :model, :description, :image_url, :price, :transmission, :seats, :body)
-    end
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_car
+    @car = Car.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def car_params
+    params.require(:car).permit(:brand, :model, :description, :image_url, :price, :transmission, :seats, :body)
+  end
 end

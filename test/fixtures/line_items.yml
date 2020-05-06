@@ -6,4 +6,4 @@ one:
 
 two:
   car: sprinter
-  cart: two
+  order: one
