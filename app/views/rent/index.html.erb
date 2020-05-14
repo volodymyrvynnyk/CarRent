@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h1>Rent our car</h1>
+<h1><%= t('.title_html') %></h1>
 <% cache @cars do %>
   <% @cars.each do |car| %>
     <% cache car do %>
@@ -13,7 +13,9 @@
         <%= sanitize(car.description) %>
         <div class="price_line">
           <h3>Price per hour: <span class="price"><%= number_to_currency(car.price) %></span></h3>
-          <%= button_to 'Add to Cart', line_items_path(car_id: car), remote: true %>
+          <%= button_to t('.add_html'),
+                        line_items_path(car_id: car, locale: I18n.locale),
+                        remote: true %>
         </div>
       </div>
     <% end %>
