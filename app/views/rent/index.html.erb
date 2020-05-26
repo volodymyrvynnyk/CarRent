@@ -12,10 +12,10 @@
 
         <%= sanitize(car.description) %>
         <div class="price_line">
-          <h3>Price per hour: <span class="price"><%= number_to_currency(car.price) %></span></h3>
-          <%= button_to t('.add_html'),
-                        line_items_path(car_id: car, locale: I18n.locale),
-                        remote: true %>
+          <h3>Price per hour: <span class="price"><%= number_to_currency(car.price) %></span>
+            <%= button_to t('.add_html'), line_items_path(car_id: car, locale: I18n.locale), remote: true %>
+          </h3>
+
         </div>
       </div>
     <% end %>

@@ -7,5 +7,11 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3-3</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="carrent_ruby@carrent.czbzelttogvg.eu-central-1.rds.amazonaws.com" uuid="ff19b5fd-17a6-4792-8148-994c543dfa2c">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://carrent.czbzelttogvg.eu-central-1.rds.amazonaws.com:3306/carrent_ruby</jdbc-url>
+    </data-source>
   </component>
 </project>

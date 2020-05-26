@@ -38,7 +38,7 @@ en:
       news: "News"
       contact: "Contact"
 
-  store:
+  rent:
     index:
       title_html: "Rent our car"
       add_html: "Add to Cart"
