@@ -9,8 +9,8 @@ default: &default
   encoding: unicode
   host: carrent.czbzelttogvg.eu-central-1.rds.amazonaws.com
   port: 3306
-  username: *
-  password: *
+  username: carrent
+  password: carrentdb
   pool: 5
   timeout: 5000
 
